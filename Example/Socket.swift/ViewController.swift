@@ -7,12 +7,20 @@
 //
 
 import UIKit
+import Socket_swift
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let socket = Socket(host: "123.125.114.144")
+        switch socket.connect() {
+        case .success:
+            let s = socket.read()
+            print(s)
+        default:
+            print(1)
+        }
     }
 
     override func didReceiveMemoryWarning() {

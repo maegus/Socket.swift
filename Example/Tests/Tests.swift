@@ -2,7 +2,6 @@
 
 import Quick
 import Nimble
-import Socket.swift
 
 class TableOfContentsSpec: QuickSpec {
     override func spec() {
